@@ -26,8 +26,9 @@ The application displays basic student information on a single page:
 - Register number
 - Programme
 
-A **Show Details** button reveals additional details using plain JavaScript.
-A contact information section lists an email address and phone number.
+A **Show Details** button reveals additional details using plain JavaScript
+(semester, CGPA, email, phone, date of birth and mentor). Clicking it again
+hides them.
 
 There is no database, no backend, and no framework. Everything runs directly
 in the browser.
@@ -67,22 +68,21 @@ pull request that another team member reviews.
 |--------|--------|---------|
 | `main` | — | Stable integration branch |
 | `feature/ui` | Praneeth M | Card layout, spacing, headings, button styling |
-| `feature/javascript` | Sam | Show Details button functionality |
-| `feature/contact` | Praneeth M | Contact information section |
+| `feature/javascript` | Sam | Show Details button functionality, dark mode |
 | `feature/student-name` | Praneeth M | Change heading to "Student Management System" |
 | `feature/app-title` | Sam | Change heading to "MCA Student Information Portal" |
+| `docs/readme-sync` | Sam | Keep this README in step with the repository |
 
 ---
 
 ## Pull Requests Created
 
-| # | Pull Request | Author | Reviewed & Merged By | Status |
-|---|--------------|--------|----------------------|--------|
+| # | Pull Request | Author | Reviewed By | Status |
+|---|--------------|--------|-------------|--------|
 | 1 | `feature/ui` → `main` | Praneeth M | Sam | Merged |
 | 2 | `feature/javascript` → `main` | Sam | Praneeth M | Merged |
-| 3 | `feature/contact` → `main` | Praneeth M | Sam | Merged |
-| 4 | `feature/student-name` → `main` | Praneeth M | Sam | Merged |
-| 5 | `feature/app-title` → `main` | Sam | Praneeth M | Merged after conflict resolution |
+| 3 | `feature/student-name` → `main` | Praneeth M | Sam | Merged |
+| 4 | `feature/app-title` → `main` | Sam | Praneeth M | Merged after conflict resolution |
 
 ---
 
@@ -171,3 +171,36 @@ conflict resolution:
 ```bash
 git log --oneline --graph --all
 ```
+
+At the end of the exercise the history looked like this:
+
+```
+*   Merge pull request #4 from praneethm05/feature/app-title
+|\
+| *   Resolve merge conflict in application title
+| |\
+| |/
+|/|
+* |   Merge pull request #3 from praneethm05/feature/student-name
+|\ \
+| * | Update application heading
+|/ /
+| * Update application title
+|/
+*   Merge pull request #2 from praneethm05/feature/javascript
+|\
+| * Add register number for Sam in README
+| * Add student details functionality
+|/
+*   Merge pull request #1 from praneethm05/feature/ui
+|\
+| * Change button background color to #2467c1
+| * Improve student information UI
+|/
+* Initial student information app
+```
+
+The `Resolve merge conflict in application title` commit has **two parents** —
+`Update application title` (from `feature/app-title`) and the tip of `main`
+after `feature/student-name` was merged. That two-parent commit is the record
+of the conflict being resolved.
