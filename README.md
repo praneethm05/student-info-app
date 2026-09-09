@@ -14,7 +14,7 @@ conflict resolution using Git and GitHub.
 | Name | Register Number | Role | Responsibility |
 |------|-----------------|------|----------------|
 | Praneeth M | 2547142 | Team Lead / UI Developer | Repository setup, base application, HTML/CSS, integration, PR review |
-| Sam | TODO | JavaScript Developer | JavaScript functionality, merge conflict resolution |
+| Sam | 2547149 | JavaScript Developer | JavaScript functionality, merge conflict resolution |
 
 ---
 
