@@ -8,17 +8,71 @@
 </head>
 <body>
 
-  <h1>Student Information System</h1>
+  <main class="page">
 
-  <div class="student-info">
-    <p>Name: Praneeth M</p>
-    <p>Register Number: 2547142</p>
-    <p>Programme: MCA</p>
-  </div>
+    <h1>Student Information System</h1>
 
-  <button id="showDetailsBtn">Show Details</button>
+    <section class="card" aria-labelledby="student-name">
+      <header class="card__header">
+        <div class="avatar" aria-hidden="true">PM</div>
+        <div>
+          <h2 id="student-name" class="card__name">Praneeth M</h2>
+          <p class="card__programme">MCA &middot; Master of Computer Applications</p>
+        </div>
+      </header>
 
-  <div id="details"></div>
+      <dl class="info">
+        <div class="info__row">
+          <dt>Name</dt>
+          <dd>Praneeth M</dd>
+        </div>
+        <div class="info__row">
+          <dt>Register Number</dt>
+          <dd>2547142</dd>
+        </div>
+        <div class="info__row">
+          <dt>Programme</dt>
+          <dd>MCA</dd>
+        </div>
+      </dl>
+
+      <button id="showDetailsBtn" class="btn" type="button" aria-expanded="false" aria-controls="details">
+        Show Details
+      </button>
+
+      <div id="details" class="details" hidden>
+        <dl class="info">
+          <div class="info__row">
+            <dt>Semester</dt>
+            <dd>3</dd>
+          </div>
+          <div class="info__row">
+            <dt>CGPA</dt>
+            <dd>8.7 / 10</dd>
+          </div>
+          <div class="info__row">
+            <dt>Email</dt>
+            <dd>praneeth.m@example.edu</dd>
+          </div>
+          <div class="info__row">
+            <dt>Phone</dt>
+            <dd>+91 90000 00000</dd>
+          </div>
+          <div class="info__row">
+            <dt>Date of Birth</dt>
+            <dd>05 March 2003</dd>
+          </div>
+          <div class="info__row">
+            <dt>Mentor</dt>
+            <dd>Dr. A. Kumar</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <p class="footnote">Collaborative Git Workflow lab exercise &middot; HTML, CSS &amp; vanilla JavaScript</p>
+
+  </main>
 
   <script src="script.js"></script>
 </body>
